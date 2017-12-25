@@ -1,0 +1,66 @@
+@import "vars.styl"
+
+
+.header
+  &__line
+    border-bottom 1px solid #EDEDED
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+  &__top
+    width 100%
+    grid-template 50px / 172px 4fr 3fr
+  &__logo
+    width 172px
+    height 18px
+    &-indent
+      margin-top 18px
+  &__menu
+    display inline-block
+    align-items center
+    //visibility hidden
+    &--indent-left
+      margin-left $gutter
+    &--responsive
+      justify-content space-between
+  &__par
+    display table-cell
+  &__link
+    padding 15px 10px 15px
+    color $dark
+    font-weight 600
+    line-height 5px
+    &--delete-indent-left
+      padding-left 0
+    &--delete-indent-right
+      padding-right 0
+  &__settings
+    align-items center
+    justify-content space-between
+  &__tools
+    height 1.4em
+  &__icon
+    margin-right 10px
+  &__flag
+    display inline-block
+    width 22px
+    height 20px
+    margin-right 5px
+    background-size cover
+  &__text
+    color $dark
+    font-weight 600
+    &--active
+      padding-bottom 13px
+      color $dark
+      font-weight 600
+      border-bottom 5px solid $border-bt
+  &__lower
+    grid-template 50px / 600px 1fr
+
+.landing
+  height 100vh
+  background-image url("/assets/images/bg.jpg")
+  background-size cover
+  background-position 50% 50%
