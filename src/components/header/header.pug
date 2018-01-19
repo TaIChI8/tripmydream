@@ -3,7 +3,7 @@ header.header
     .header__top.container.grid
         a.header__logo-indent(href="/")
             img.header__logo(src="assets/images/logo.svg")
-        ul.header__menu.header__menu--indent-left.flex
+        ul.header__menu.header__menu--indent-left.header__menu--hidden.flex
             li.header__par
                 a.header__link(href="/")
                     span.header__text Авиа
@@ -15,7 +15,7 @@ header.header
                     span.header__text Отели
             li.header__par
                 a.header__link(href="/")
-                    span.header__text Авиа+Отель
+                    span.header__text--active Авиа+Отель
                         sup (β)
             li.header__par
                 a.header__link(href="/")
@@ -32,22 +32,20 @@ header.header
                 svg.header__icon(viewbox='0 0 20 20', height='100%')
                     path(d='M10 19a9 9 0 1 0 0-18 9 9 0 0 0 0 18zm0 1C4.477 20 0 15.523 0 10S4.477 0 10 0s10 4.477 10 10-4.477 10-10 10zm0-9a9.991 9.991 0 0 1 8.353 4.5A9.991 9.991 0 0 1 10 20a9.991 9.991 0 0 1-8.353-4.5A9.991 9.991 0 0 1 10 11zm0 8a8.985 8.985 0 0 0 7.125-3.5A8.985 8.985 0 0 0 10 12a8.985 8.985 0 0 0-7.125 3.5A8.985 8.985 0 0 0 10 19zm0-7a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z', fill-rule='nonzero')
                 span.header__text Вход в аккаунт
-nav.header__lower.container.grid
-    .header__menu.header__menu--responsive.flex
-        a.header__link.header__link--delete-indent-left(href="/")
-            span.header__text Авиа
-        a.header__link(href="/")
-            span.header__text Авиаскидки
-        a.header__link(href="/")
-            span.header__text Отели
-        a.header__link(href="/")
-            span.header__text--active Авиа+Отель
-                sup (β)
-        a.header__link(href="/")
-            span.header__text Экскурсии
-        a.header__link(href="/")
-            span.header__text Блог
-        a.header__link.header__link--delete-indent-right(href="/")
-            span.header__text Гид
-
-section.landing
+    nav.header__lower.container.grid
+                    .header__menu.header__menu--responsive.flex
+                        a.header__link.header__link--delete-indent-left(href="/")
+                            span.header__text Авиа
+                        a.header__link(href="/")
+                            span.header__text Авиаскидки
+                        a.header__link(href="/")
+                            span.header__text Отели
+                        a.header__link.header__link--indent(href="/")
+                            span.header__text--active Авиа+Отель
+                                sup (β)
+                        a.header__link(href="/")
+                            span.header__text Экскурсии
+                        a.header__link(href="/")
+                            span.header__text Блог
+                        a.header__link.header__link--delete-indent-right(href="/")
+                            span.header__text Гид

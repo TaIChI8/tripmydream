@@ -14,11 +14,11 @@
       <header class="header">
         <div class="header__line"></div>
         <div class="header__top container grid"><a class="header__logo-indent" href="/"><img class="header__logo" src="assets/images/logo.svg"></a>
-          <ul class="header__menu header__menu--indent-left flex">
+          <ul class="header__menu header__menu--indent-left header__menu--hidden flex">
             <li class="header__par"><a class="header__link" href="/"><span class="header__text">Авиа</span></a></li>
             <li class="header__par"><a class="header__link" href="/"><span class="header__text">Авиаскидки</span></a></li>
             <li class="header__par"><a class="header__link" href="/"><span class="header__text">Отели</span></a></li>
-            <li class="header__par"><a class="header__link" href="/"><span class="header__text">Авиа+Отель<sup>(β)</sup></span></a></li>
+            <li class="header__par"><a class="header__link" href="/"><span class="header__text--active">Авиа+Отель<sup>(β)</sup></span></a></li>
             <li class="header__par"><a class="header__link" href="/"><span>Ещё</span></a></li>
           </ul>
           <div class="header__settings flex"><a class="header__tools flex" href="/">
@@ -30,11 +30,364 @@
                 <path d="M10 19a9 9 0 1 0 0-18 9 9 0 0 0 0 18zm0 1C4.477 20 0 15.523 0 10S4.477 0 10 0s10 4.477 10 10-4.477 10-10 10zm0-9a9.991 9.991 0 0 1 8.353 4.5A9.991 9.991 0 0 1 10 20a9.991 9.991 0 0 1-8.353-4.5A9.991 9.991 0 0 1 10 11zm0 8a8.985 8.985 0 0 0 7.125-3.5A8.985 8.985 0 0 0 10 12a8.985 8.985 0 0 0-7.125 3.5A8.985 8.985 0 0 0 10 19zm0-7a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" fill-rule="nonzero"></path>
               </svg><span class="header__text">Вход в аккаунт</span></a></div>
         </div>
+        <nav class="header__lower container grid">
+          <div class="header__menu header__menu--responsive flex"><a class="header__link header__link--delete-indent-left" href="/"><span class="header__text">Авиа</span></a><a class="header__link" href="/"><span class="header__text">Авиаскидки</span></a><a class="header__link" href="/"><span class="header__text">Отели</span></a><a class="header__link header__link--indent" href="/"><span class="header__text--active">Авиа+Отель<sup>(β)</sup></span></a><a class="header__link" href="/"><span class="header__text">Экскурсии</span></a><a class="header__link" href="/"><span class="header__text">Блог</span></a><a class="header__link header__link--delete-indent-right" href="/"><span class="header__text">Гид</span></a></div>
+        </nav>
       </header>
-      <nav class="header__lower container grid">
-        <div class="header__menu header__menu--responsive flex"><a class="header__link header__link--delete-indent-left" href="/"><span class="header__text">Авиа</span></a><a class="header__link" href="/"><span class="header__text">Авиаскидки</span></a><a class="header__link" href="/"><span class="header__text">Отели</span></a><a class="header__link" href="/"><span class="header__text--active">Авиа+Отель<sup>(β)</sup></span></a><a class="header__link" href="/"><span class="header__text">Экскурсии</span></a><a class="header__link" href="/"><span class="header__text">Блог</span></a><a class="header__link header__link--delete-indent-right" href="/"><span class="header__text">Гид</span></a></div>
-      </nav>
-      <section class="landing"></section>
+      <section class="search-travels grid" style="background-image: url('/assets/images/bg.jpg');">
+        <div class="search-travels__container container grid">
+          <div class="search-travels__title grid">
+            <div class="head-title">Поиск выгодных путешествий</div>
+            <div class="sub-title">Найди лучшее среди 2000+ направлений. Сэкономь до 80 %</div>
+          </div>
+          <div class="search-travels__types grid"><a class="search-travels__item search-travels__item--offset" href="/">
+              <div class="search-travels__icon flex">
+                <svg class="search-travels__icon-size">
+                  <use xlink:href="assets/images/sprite-aug.svg#icon-s-sea"></use>
+                </svg>
+              </div>
+              <div class="search-travels__types-name">Пляж</div></a><a class="search-travels__item" href="/">
+              <div class="search-travels__icon flex">
+                <svg class="search-travels__icon-size">
+                  <use xlink:href="assets/images/sprite-aug.svg#icon-s-exotic"></use>
+                </svg>
+              </div>
+              <div class="search-travels__types-name">Экзотика</div></a><a class="search-travels__item" href="/">
+              <div class="search-travels__icon flex">
+                <svg class="search-travels__icon-size search-travels__icon-add">
+                  <use xlink:href="assets/images/sprite-aug.svg#icon-s-ski"></use>
+                </svg>
+              </div>
+              <div class="search-travels__types-name">Горнолыжный отдых</div></a><a class="search-travels__item" href="/">
+              <div class="search-travels__icon flex">
+                <svg class="search-travels__icon-size">
+                  <use xlink:href="assets/images/sprite-aug.svg#icon-s-sightseeing"></use>
+                </svg>
+              </div>
+              <div class="search-travels__types-name">Экскурсионные города</div></a><a class="search-travels__item" href="/">
+              <div class="search-travels__icon flex">
+                <svg class="search-travels__icon-size">
+                  <use xlink:href="assets/images/sprite-aug.svg#icon-s-spa"></use>
+                </svg>
+              </div>
+              <div class="search-travels__types-name">СПА и термы</div></a><a class="search-travels__item" href="/">
+              <div class="search-travels__icon flex">
+                <svg class="search-travels__icon-size search-travels__icon-add">
+                  <use xlink:href="assets/images/sprite-aug.svg#icon-s-destination"></use>
+                </svg>
+              </div>
+              <div class="search-travels__types-name">Знаю куда</div></a></div>
+        </div>
+      </section>
+      <section class="avia-promo landing-section">
+        <article class="avia-promo__container container">
+          <div class="avia-promo__title">
+            <div class="bold-title">Найти дешевый перелет стало еще проще!</div>
+            <div class="sub-title">Популярные бюджетные предложения на перелеты по всему миру</div>
+          </div>
+          <div class="avia-promo__list grid">
+            <article class="avia-promo__item">
+              <div class="avia-promo__item-title">Вылет из города Москва:</div><a class="avia-promo__link" href="#">
+                <div class="avia-promo__img" style="background-image: url(../assets/images/avia1.jpg);">
+                  <div class="avia-promo__side-label"><span class="avia-promo__side-label-sale">-52%</span><span class="avia-promo__side-label-title">Сегодня</span></div>
+                  <div class="avia-promo__note">
+                    <div class="avia-promo__row grid">
+                      <div class="avia-promo__cell">
+                        <div class="avia-promo__city">Тбилиси</div>
+                        <div class="avia-promo__country">Грузия</div>
+                      </div>
+                      <div class="avia-promo__cell flex">
+                        <div class="avia-promo__price-old obsolete">14 225 руб.</div>
+                        <div class="avia-promo__price-actual">6 828 руб.</div>
+                        <div class="avia-promo__price-date">25 Янв 2018 - 08 Фев 2018</div>
+                      </div>
+                    </div>
+                  </div>
+                </div></a>
+              <div class="avia-promo__table"><a class="avia-promo__tab-link grid" href="#">
+                  <div class="avia-promo__cell">
+                    <div class="avia-promo__city">Ларнака</div>
+                    <div class="avia-promo__country">Кипр</div>
+                  </div>
+                  <div class="avia-promo__cell flex">
+                    <div class="avia-promo__price-old avia-promo__price-old--change obsolete">13 570 руб.<span class="avia-promo__price-sale">-48%</span></div>
+                    <div class="avia-promo__price-actual--change">7 056 руб.</div>
+                    <div class="avia-promo__price-date--change">10 Фев 2018 - 17 Фев 2018</div>
+                  </div></a><a class="avia-promo__tab-link grid" href="#">
+                  <div class="avia-promo__cell">
+                    <div class="avia-promo__city">Малага</div>
+                    <div class="avia-promo__country">Испания</div>
+                  </div>
+                  <div class="avia-promo__cell flex">
+                    <div class="avia-promo__price-old avia-promo__price-old--change obsolete">36 324 руб.<span class="avia-promo__price-sale">-49%</span></div>
+                    <div class="avia-promo__price-actual--change">18 525 руб.</div>
+                    <div class="avia-promo__price-date--change">01 Окт 2018 - 22 Окт 2018</div>
+                  </div></a><a class="avia-promo__tab-link grid" href="#">
+                  <div class="avia-promo__cell">
+                    <div class="avia-promo__city">Стамбул</div>
+                    <div class="avia-promo__country">Турция</div>
+                  </div>
+                  <div class="avia-promo__cell flex">
+                    <div class="avia-promo__price-old avia-promo__price-old--change obsolete">20 547 руб.<span class="avia-promo__price-sale">-42%</span></div>
+                    <div class="avia-promo__price-actual--change">11 917 руб.</div>
+                    <div class="avia-promo__price-date--change">28 Янв 2018 - 01 Фев 2018</div>
+                  </div></a><a class="avia-promo__tab-link grid" href="#">
+                  <div class="avia-promo__cell">
+                    <div class="avia-promo__city">Пекин</div>
+                    <div class="avia-promo__country">Китай</div>
+                  </div>
+                  <div class="avia-promo__cell flex">
+                    <div class="avia-promo__price-old avia-promo__price-old--change obsolete">50 215 руб.<span class="avia-promo__price-sale">-45%</span></div>
+                    <div class="avia-promo__price-actual--change">27 618 руб.</div>
+                    <div class="avia-promo__price-date--change">14 Апр 2018 - 28 Апр 2018</div>
+                  </div></a>
+              </div>
+            </article>
+            <article class="avia-promo__item">
+              <div class="avia-promo__item-title">Вылет из города Санкт-Петербург:</div><a class="avia-promo__link" href="#">
+                <div class="avia-promo__img" style="background-image: url(../assets/images/avia2.jpg);">
+                  <div class="avia-promo__side-label"><span class="avia-promo__side-label-sale">-45%</span><span class="avia-promo__side-label-title">Сегодня</span></div>
+                  <div class="avia-promo__note">
+                    <div class="avia-promo__row grid">
+                      <div class="avia-promo__cell">
+                        <div class="avia-promo__city">Ханой</div>
+                        <div class="avia-promo__country">Вьетнам</div>
+                      </div>
+                      <div class="avia-promo__cell flex">
+                        <div class="avia-promo__price-old obsolete">55 046 руб.</div>
+                        <div class="avia-promo__price-actual">30 275 руб.</div>
+                        <div class="avia-promo__price-date">26 Мар 2018 - 04 Апр 2018</div>
+                      </div>
+                    </div>
+                  </div>
+                </div></a>
+              <div class="avia-promo__table"><a class="avia-promo__tab-link grid" href="#">
+                  <div class="avia-promo__cell">
+                    <div class="avia-promo__city">Будапешт</div>
+                    <div class="avia-promo__country">Венгрия</div>
+                  </div>
+                  <div class="avia-promo__cell flex">
+                    <div class="avia-promo__price-old avia-promo__price-old--change obsolete">14 056 руб.<span class="avia-promo__price-sale">-55%</span></div>
+                    <div class="avia-promo__price-actual--change">6 325 руб.</div>
+                    <div class="avia-promo__price-date--change">18 Янв 2018 - 25 Янв 2018</div>
+                  </div></a><a class="avia-promo__tab-link grid" href="#">
+                  <div class="avia-promo__cell">
+                    <div class="avia-promo__city">Аликанте</div>
+                    <div class="avia-promo__country">Испания</div>
+                  </div>
+                  <div class="avia-promo__cell flex">
+                    <div class="avia-promo__price-old avia-promo__price-old--change obsolete">28 240 руб.<span class="avia-promo__price-sale">-44%</span></div>
+                    <div class="avia-promo__price-actual--change">15 814 руб.</div>
+                    <div class="avia-promo__price-date--change">20 Янв 2018 - 27 Янв 2018</div>
+                  </div></a><a class="avia-promo__tab-link grid" href="#">
+                  <div class="avia-promo__cell">
+                    <div class="avia-promo__city">Бремен</div>
+                    <div class="avia-promo__country">Германия</div>
+                  </div>
+                  <div class="avia-promo__cell flex">
+                    <div class="avia-promo__price-old avia-promo__price-old--change obsolete">23 104 руб.<span class="avia-promo__price-sale">-45%</span></div>
+                    <div class="avia-promo__price-actual--change">12 707 руб.</div>
+                    <div class="avia-promo__price-date--change">20 Фев 2018 - 03 Мар 2018</div>
+                  </div></a><a class="avia-promo__tab-link grid" href="#">
+                  <div class="avia-promo__cell">
+                    <div class="avia-promo__city">Рим</div>
+                    <div class="avia-promo__country">Италия</div>
+                  </div>
+                  <div class="avia-promo__cell flex">
+                    <div class="avia-promo__price-old avia-promo__price-old--change obsolete">25 073 руб.<span class="avia-promo__price-sale">-34%</span></div>
+                    <div class="avia-promo__price-actual--change">16 548 руб.</div>
+                    <div class="avia-promo__price-date--change">31 Янв 2018 - 07 Фев 2018</div>
+                  </div></a>
+              </div>
+            </article>
+            <article class="avia-promo__item">
+              <div class="avia-promo__item-title">Вылет из города Екатеринбург:</div><a class="avia-promo__link" href="#">
+                <div class="avia-promo__img" style="background-image: url(../assets/images/avia3.jpg);">
+                  <div class="avia-promo__side-label"><span class="avia-promo__side-label-sale">-28%</span><span class="avia-promo__side-label-title">Сегодня</span></div>
+                  <div class="avia-promo__note">
+                    <div class="avia-promo__row grid">
+                      <div class="avia-promo__cell">
+                        <div class="avia-promo__city">Дубай</div>
+                        <div class="avia-promo__country">ОАЭ</div>
+                      </div>
+                      <div class="avia-promo__cell flex">
+                        <div class="avia-promo__price-old obsolete">23 712 руб.</div>
+                        <div class="avia-promo__price-actual">17 072 руб.</div>
+                        <div class="avia-promo__price-date">02 Фев 2018 - 09 Фев 2018</div>
+                      </div>
+                    </div>
+                  </div>
+                </div></a>
+              <div class="avia-promo__table"><a class="avia-promo__tab-link grid" href="#">
+                  <div class="avia-promo__cell">
+                    <div class="avia-promo__city">Пиза</div>
+                    <div class="avia-promo__country">Италия</div>
+                  </div>
+                  <div class="avia-promo__cell flex">
+                    <div class="avia-promo__price-old avia-promo__price-old--change obsolete">25 028 руб.<span class="avia-promo__price-sale">-49%</span></div>
+                    <div class="avia-promo__price-actual--change">12 764 руб.</div>
+                    <div class="avia-promo__price-date--change">26 Сен 2018 - 03 Окт 2018</div>
+                  </div></a><a class="avia-promo__tab-link grid" href="#">
+                  <div class="avia-promo__cell">
+                    <div class="avia-promo__city">Прага</div>
+                    <div class="avia-promo__country">Чехия</div>
+                  </div>
+                  <div class="avia-promo__cell flex">
+                    <div class="avia-promo__price-old avia-promo__price-old--change obsolete">16 599 руб.<span class="avia-promo__price-sale">-18%</span></div>
+                    <div class="avia-promo__price-actual--change">13 611 руб.</div>
+                    <div class="avia-promo__price-date--change">08 Дек 2018 - 14 Дек 2018</div>
+                  </div></a><a class="avia-promo__tab-link grid" href="#">
+                  <div class="avia-promo__cell">
+                    <div class="avia-promo__city">Тель-Авив</div>
+                    <div class="avia-promo__country">Израиль</div>
+                  </div>
+                  <div class="avia-promo__cell flex">
+                    <div class="avia-promo__price-old avia-promo__price-old--change obsolete">20 036 руб.<span class="avia-promo__price-sale">-16%</span></div>
+                    <div class="avia-promo__price-actual--change">16 830 руб.</div>
+                    <div class="avia-promo__price-date--change">03 Фев 2018 - 09 Фев 2018</div>
+                  </div></a><a class="avia-promo__tab-link grid" href="#">
+                  <div class="avia-promo__cell">
+                    <div class="avia-promo__city">Киев</div>
+                    <div class="avia-promo__country">Украина</div>
+                  </div>
+                  <div class="avia-promo__cell flex">
+                    <div class="avia-promo__price-old avia-promo__price-old--change obsolete">19 865 руб.<span class="avia-promo__price-sale">-13%</span></div>
+                    <div class="avia-promo__price-actual--change">17 282 руб.</div>
+                    <div class="avia-promo__price-date--change">29 Янв 2018 - 08 Фев 2018</div>
+                  </div></a>
+              </div>
+            </article>
+          </div>
+          <div class="avia-promo__all-stock">
+            <button class="avia-promo__btn btn btn-size">Смотреть все акции и скидки на авиабилеты</button>
+          </div>
+        </article>
+      </section>
+      <section class="calendar landing-section-min" style="background-image: url('/assets/images/bg_sky.jpg');">
+        <div class="calendar__container container">
+          <div class="calendar__block grid">
+            <div class="calendar__title bold-title">Узнай лучшие цены на весь год!</div>
+            <div class="calendar__item">
+              <div class="calendar__head font-cal">
+                <div class="calendar__head-title">Самый</div>
+                <div class="calendar__head-title"><span class="calendar__head-title--transform">дешевый</span></div>
+                <div class="calendar__head-title">месяц</div>
+              </div>
+              <div class="calendar__text">Мы поможем выбрать, когда цена на выбранное вами направление самая дешевая</div>
+            </div>
+            <div class="calendar__item">
+              <div class="calendar__head font-cal">
+                <div class="calendar__head-title">Самые</div>
+                <div class="calendar__head-title"><span class="calendar__head-title--transform">дешевые</span></div>
+                <div class="calendar__head-title">направления</div>
+              </div>
+              <div class="calendar__text">Есть время на отдых, но не определились, куда выгодно полететь? Поможем с выбором</div>
+            </div>
+            <div class="calendar__item">
+              <div class="calendar__head font-cal">
+                <div class="calendar__head-title">Цены на</div>
+                <div class="calendar__head-title"><span class="calendar__head-title--transform">весь год</span></div>
+                <div class="calendar__head-title">по направлению</div>
+              </div>
+              <div class="calendar__text">Интересуют все цены на год? У нас вы найдете максимум цен на нужное направление</div>
+            </div>
+            <div class="calendar__low-prices">
+              <button class="calendar__btn btn btn-indent">
+                <svg class="calendar__icon-size">
+                  <use xlink:href="assets/images/sprite-aug.svg#icon-date"></use>
+                </svg><span>Перейти в Календарь низких цен</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="advantage landing-section">
+        <div class="advantage__container container">
+          <div class="advantage__block grid">
+            <div class="advantage__title">
+              <div class="bold-title">TripMyDream</div>
+              <div class="sub-title">сервис для самостоятельного планирования выгодных путешествий</div>
+            </div>
+            <div class="advantage__about-us flex">
+              <div class="advantage__icon flex">
+                <svg class="advantage__icon-size">
+                  <use xlink:href="assets/images/sprite-aug.svg#icon-tmd-icon"></use>
+                </svg>
+              </div>
+              <div class="advantage__head">Это удобно</div>
+              <div class="advantage__about-us-text">Наш сервис мгновенно собирает всю информацию о перелетах и проживании, избавляя вас от необходимости просматиривать десятки разных сайтов</div>
+            </div>
+            <div class="advantage__about-us flex">
+              <div class="advantage__icon flex">
+                <svg class="advantage__icon-size">
+                  <use xlink:href="assets/images/sprite-aug.svg#icon-money"></use>
+                </svg>
+              </div>
+              <div class="advantage__head">Это выгодно</div>
+              <div class="advantage__about-us-text">Мы анализируем цены, скидки и акции по перелетам и видам размещения и предлагаем вам лучшее с учетом указаного бюджета</div>
+            </div>
+            <div class="advantage__about-us flex">
+              <div class="advantage__icon flex">
+                <svg class="advantage__icon-size">
+                  <use xlink:href="assets/images/sprite-aug.svg#icon-inspiration"></use>
+                </svg>
+              </div>
+              <div class="advantage__head">Это вдохновляет</div>
+              <div class="advantage__about-us-text">С TripMyDream вы найдете идеальное место для отдыха - узнавайте, сравнивайте предложения, выбирайте и путешествуйте выгодно</div>
+            </div>
+            <div class="advantage__underline"></div>
+            <div class="advantage__sum-people flex">
+              <div class="advantage__counter"><span class="advantage__counter-num">2</span><span class="advantage__counter-num">5</span><span class="advantage__counter-num">0</span><span class="advantage__counter-num">0</span><span class="advantage__counter-num">0</span><span class="advantage__counter-num">0</span><span class="advantage__counter-num">0</span>
+                <p class="advantage__text">человек нашли авиабилеты с TripMyDream</p>
+              </div>
+              <div class="advantage__img"><img src="assets/images/counter.png"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="best landing-section-min" style="background-image: url('/assets/images/stat-bg.jpg');">
+        <div class="best__container container">
+          <div class="best__block grid">
+            <div class="best__title bold-title">Мы ищем для вас лучшее среди:</div>
+            <div class="best__info">
+              <div class="best__number">1 млн</div>
+              <div class="best__text">отелей, вилл,<br><span>апартаментов</span></div>
+            </div>
+            <div class="best__info">
+              <div class="best__number">150</div>
+              <div class="best__text">стран</div>
+            </div>
+            <div class="best__info">
+              <div class="best__number">500</div>
+              <div class="best__text">авиакомпаний<br><span>и лоукостеров</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="video-player landing-section">
+        <div class="video-player__container container">
+          <div class="video-player__block grid">
+            <div class="video-player__title">
+              <div class="bold-title">Впервые на нашем сервисе?</div>
+              <div class="sub-title">Посмотрите видео о том, как просто это работает!</div>
+            </div>
+            <div class="video-player__video">
+              <video controls="yes" poster="https://cdn.tripmydream.com/wind-sandbox/tripmydream/img/movie.jpg" style="width: 100%;cursor:pointer;" onclick="this.paused?this.play():this.pause()">
+                <source src="//cdn.tripmydream.com/video/tmd_ru.mp4" type="video/mp4">
+                <source src="//cdn.tripmydream.com/video/tmd_ru.webm" type="video/webm">
+                <source src="//cdn.tripmydream.com/video/tmd_ru.ogv" type="video/ogg">                    Your browser does not support HTML5 video.
+              </video>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="fb-widget landing-section" style="background-image: url('/assets/images/fb-widget-bg.jpg');">
+        <div class="fb-widget__container container">
+          <div class="fb-widget__block gridn">
+            <div class="fb-widget__title bold-title">Присоединяйтесь к любителям путешествий!</div>
+          </div>
+        </div>
+      </section>
       <!--include ../components/footer/footer-->
       <div class="overlay"></div>
     </div>

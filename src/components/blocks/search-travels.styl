@@ -1,0 +1,52 @@
+@import "vars.styl"
+
+
+.search-travels
+  height calc(100vh - 100px)
+  background-size cover
+  background-position center
+  background-repeat no-repeat
+  position relative
+  &:before
+    content ''
+    background rgba(0,0,0,.5)
+    position absolute
+    top 0
+    left 0
+    right 0
+    bottom 0
+  &__container
+    grid-row-gap 30px
+    position relative
+    text-align center
+  &__title
+    grid-template 50px 50px / 1fr
+    color $light
+  &__item
+    width 140px
+    color $light
+    &--offset
+      grid-column 2 / 3
+  &__item:hover &__icon
+    background rgba(255,126,0,.7)
+  &__types
+    grid-template unquote('200px / repeat(8, 1fr)')
+    grid-column-gap 30px
+  &__types-name
+    font-size 16px
+    font-weight 550
+  &__icon
+    height 140px
+    align-items center
+    justify-content center
+    margin-bottom 8px
+    border-radius 50px
+    transition background .2s
+    background rgba(255, 255, 255, 0.2)
+    fill $light
+  &__icon-size
+    width 1em
+    height 1em
+    font-size 85px
+  &__icon-add
+    font-size 100px

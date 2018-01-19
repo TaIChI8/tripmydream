@@ -1,0 +1,12 @@
+section.video-player.landing-section
+    .video-player__container.container
+        .video-player__block.grid
+            .video-player__title
+                .bold-title Впервые на нашем сервисе?
+                .sub-title Посмотрите видео о том, как просто это работает!
+            .video-player__video
+                video(controls='yes', poster='https://cdn.tripmydream.com/wind-sandbox/tripmydream/img/movie.jpg', style='width: 100%;cursor:pointer', onclick='this.paused?this.play():this.pause()')
+                    source(src='//cdn.tripmydream.com/video/tmd_ru.mp4', type='video/mp4')
+                    source(src='//cdn.tripmydream.com/video/tmd_ru.webm', type='video/webm')
+                    source(src='//cdn.tripmydream.com/video/tmd_ru.ogv', type='video/ogg')
+                    |                     Your browser does not support HTML5 video.

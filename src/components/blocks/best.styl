@@ -1,0 +1,26 @@
+@import "vars.styl"
+
+
+.best
+  color $light
+  text-align center
+  background-size cover
+  background-position center
+  background-repeat no-repeat
+  &__block
+    grid unquote('1fr 76px / 38% 25% 38%')
+    grid-row-gap 45px
+  &__title
+    grid-column 1 / 4
+  &__info
+    border-right 1px solid
+    &:nth-child(4)
+      border none
+  &__number
+    margin-bottom 10px
+    font-weight 900
+    font-size 36px
+    color $dark-amber
+    line-height .7
+  &__text
+    font-size 15px

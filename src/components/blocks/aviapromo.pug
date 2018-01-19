@@ -1,0 +1,167 @@
+-
+    var categories_data = [
+    {
+        title: "Вылет из города Москва:",
+        img: "background-image: url(../assets/images/avia1.jpg);",
+        sale: "-52%",
+        city: "Тбилиси",
+        country: "Грузия",
+        priceOld: "14 225 руб.",
+        priceActual: "6 828 руб.",
+        priceDate: "25 Янв 2018 - 08 Фев 2018",
+        table: [{
+                city: "Ларнака",
+                country: "Кипр",
+                priceOld: "13 570 руб.",
+                sale: "-48%",
+                priceActual: "7 056 руб.",
+                priceDate: "10 Фев 2018 - 17 Фев 2018"
+        },
+        {
+        city: "Малага",
+        country: "Испания",
+        priceOld: "36 324 руб.",
+        sale: "-49%",
+        priceActual: "18 525 руб.",
+        priceDate: "01 Окт 2018 - 22 Окт 2018"
+        },
+        {
+        city: "Стамбул",
+        country: "Турция",
+        priceOld: "20 547 руб.",
+        sale: "-42%",
+        priceActual: "11 917 руб.",
+        priceDate: "28 Янв 2018 - 01 Фев 2018"
+        },
+        {
+        city: "Пекин",
+        country: "Китай",
+        priceOld: "50 215 руб.",
+        sale: "-45%",
+        priceActual: "27 618 руб.",
+        priceDate: "14 Апр 2018 - 28 Апр 2018"
+        }]
+
+    },
+    {
+        title: "Вылет из города Санкт-Петербург:",
+        img: "background-image: url(../assets/images/avia2.jpg);",
+        sale: "-45%",
+        city: "Ханой",
+        country: "Вьетнам",
+        priceOld: "55 046 руб.",
+        priceActual: "30 275 руб.",
+        priceDate: "26 Мар 2018 - 04 Апр 2018",
+        table: [{
+            city: "Будапешт",
+            country: "Венгрия",
+            priceOld: "14 056 руб.",
+            sale: "-55%",
+            priceActual: "6 325 руб.",
+            priceDate: "18 Янв 2018 - 25 Янв 2018"
+        },
+        {
+        city: "Аликанте",
+        country: "Испания",
+        priceOld: "28 240 руб.",
+        sale: "-44%",
+        priceActual: "15 814 руб.",
+        priceDate: "20 Янв 2018 - 27 Янв 2018"
+        },
+        {
+        city: "Бремен",
+        country: "Германия",
+        priceOld: "23 104 руб.",
+        sale: "-45%",
+        priceActual: "12 707 руб.",
+        priceDate: "20 Фев 2018 - 03 Мар 2018"
+        },
+        {
+        city: "Рим",
+        country: "Италия",
+        priceOld: "25 073 руб.",
+        sale: "-34%",
+        priceActual: "16 548 руб.",
+        priceDate: "31 Янв 2018 - 07 Фев 2018"
+        }]
+    },
+    {
+        title: "Вылет из города Екатеринбург:",
+        img: "background-image: url(../assets/images/avia3.jpg);",
+        sale: "-28%",
+        city: "Дубай",
+        country: "ОАЭ",
+        priceOld: "23 712 руб.",
+        priceActual: "17 072 руб.",
+        priceDate: "02 Фев 2018 - 09 Фев 2018",
+        table: [{
+            city: "Пиза",
+            country: "Италия",
+            priceOld: "25 028 руб.",
+            sale: "-49%",
+            priceActual: "12 764 руб.",
+            priceDate: "26 Сен 2018 - 03 Окт 2018"
+        },
+        {
+        city: "Прага",
+        country: "Чехия",
+        priceOld: "16 599 руб.",
+        sale: "-18%",
+        priceActual: "13 611 руб.",
+        priceDate: "08 Дек 2018 - 14 Дек 2018"
+        },
+        {
+        city: "Тель-Авив",
+        country: "Израиль",
+        priceOld: "20 036 руб.",
+        sale: "-16%",
+        priceActual: "16 830 руб.",
+        priceDate: "03 Фев 2018 - 09 Фев 2018"
+        },
+        {
+        city: "Киев",
+        country: "Украина",
+        priceOld: "19 865 руб.",
+        sale: "-13%",
+        priceActual: "17 282 руб.",
+        priceDate: "29 Янв 2018 - 08 Фев 2018"
+        }]
+    }
+    ]
+
+section.avia-promo.landing-section
+    article.avia-promo__container.container
+        .avia-promo__title
+            .bold-title Найти дешевый перелет стало еще проще!
+            .sub-title Популярные бюджетные предложения на перелеты по всему миру
+        .avia-promo__list.grid
+            each data in categories_data
+                article.avia-promo__item
+                    .avia-promo__item-title= data.title
+                    a.avia-promo__link( href="#")
+                        .avia-promo__img(style= data.img)
+                            .avia-promo__side-label
+                                span.avia-promo__side-label-sale= data.sale
+                                span.avia-promo__side-label-title Сегодня
+                            .avia-promo__note
+                                .avia-promo__row.grid
+                                    .avia-promo__cell
+                                        .avia-promo__city= data.city
+                                        .avia-promo__country= data.country
+                                    .avia-promo__cell.flex
+                                        .avia-promo__price-old.obsolete= data.priceOld
+                                        .avia-promo__price-actual= data.priceActual
+                                        .avia-promo__price-date= data.priceDate
+                    .avia-promo__table
+                        each table in data.table
+                            a.avia-promo__tab-link.grid( href="#")
+                                .avia-promo__cell
+                                    .avia-promo__city= table.city
+                                    .avia-promo__country= table.country
+                                .avia-promo__cell.flex
+                                    .avia-promo__price-old.avia-promo__price-old--change.obsolete= table.priceOld
+                                        span.avia-promo__price-sale= table.sale
+                                    .avia-promo__price-actual--change= table.priceActual
+                                    .avia-promo__price-date--change= table.priceDate
+        .avia-promo__all-stock
+            button.avia-promo__btn.btn.btn-size Смотреть все акции и скидки на авиабилеты

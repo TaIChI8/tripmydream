@@ -1,0 +1,58 @@
+@import "vars.styl"
+
+
+.advantage
+  &__block
+    grid unquote('100px 2fr 70px 220px / repeat(3, 1fr)')
+    grid-column-gap 5%
+    text-align center
+  &__title
+    grid-column 1 / 4
+    align-self end
+  &__about-us
+    flex-direction column
+    align-items center
+  &__icon
+    width 144px
+    height 144px
+    margin-bottom 15px
+    align-items center
+    justify-content center
+    border-radius 50%
+    background $icon
+  &__icon-size
+    width 0.9em
+    height 1em
+    font-size 100px
+    fill $dark-amber
+  &__head
+    margin-bottom 3px
+    font-size 24px
+    font-weight 550
+  &__about-us-text
+    font-size 15px
+    font-weight 300
+  &__underline
+    grid-column 1 / 4
+    margin 0 90px
+    border-bottom 2px solid $underline
+  &__sum-people
+    grid-column 1 / 4
+    justify-content center
+    align-self end
+  &__counter
+    align-self center
+  &__counter-num
+    width: 50px
+    height 70px
+    display inline-block
+    margin-right 3px
+    line-height 70px
+    font-size 64px
+    font-weight 700
+    background $smoke-white
+  &__text
+    margin-top 20px
+    font-size 18px
+  &__img
+    margin-left 20px

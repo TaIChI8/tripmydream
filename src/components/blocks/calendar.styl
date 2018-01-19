@@ -1,0 +1,39 @@
+@import "vars.styl"
+
+
+.calendar
+  background-size cover
+  background-position center
+  background-repeat no-repeat
+  &__block
+    max-width 780px
+    grid unquote('1fr 2fr 83px / repeat(3, 1fr)')
+    margin 0 auto
+    padding 30px 20px
+    color $dark-gray
+    text-align center
+    background-color rgba(255, 255, 255, 0.8)
+  &__title
+    grid-column 1 / 4
+  &__item
+    padding 0 15px
+    border-right 1px solid $line
+    &:nth-child(4)
+      border none
+  &__head-title
+    &--transform
+      text-transform uppercase
+  &__text
+    margin-top 15px
+    font-size 14px
+    line-height 16px
+  &__low-prices
+    grid-column 1 / 4
+    align-self end
+  &__icon-size
+    width 1em
+    height 1em
+    margin-right 10px
+    font-size 18px
+    vertical-align middle
+    fill $light

@@ -2,6 +2,9 @@
 
 
 .header
+  width 100%
+  display block
+  background $light
   &__line
     border-bottom 1px solid #EDEDED
     position: absolute;
@@ -19,7 +22,9 @@
   &__menu
     display inline-block
     align-items center
-    //visibility hidden
+    transition visibility .15s .0s, opacity .15s .0s
+    &--hidden
+      visibility hidden
     &--indent-left
       margin-left $gutter
     &--responsive
@@ -31,6 +36,8 @@
     color $dark
     font-weight 600
     line-height 5px
+    &--indent
+      margin-bottom: 5px
     &--delete-indent-left
       padding-left 0
     &--delete-indent-right
@@ -58,9 +65,3 @@
       border-bottom 5px solid $border-bt
   &__lower
     grid-template 50px / 600px 1fr
-
-.landing
-  height 100vh
-  background-image url("/assets/images/bg.jpg")
-  background-size cover
-  background-position 50% 50%
