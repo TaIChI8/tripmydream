@@ -1,14 +1,12 @@
 @import "vars.styl"
+@import "mixins.styl"
 
 
 .fb-widget
-  background-size cover
-  background-position center
-  background-repeat no-repeat
+  bg-img()
   &__block
     grid-template-rows 100px 2fr 48px
     grid-row-gap 30px
-    text-align center
   &__title
     align-self center  
   &__body

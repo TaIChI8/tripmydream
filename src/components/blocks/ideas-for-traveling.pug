@@ -1,0 +1,73 @@
+-
+    var cards_data = [
+        {
+            img: "assets/images/block_129.jpg",
+            cube: "background: #50ae55",
+            tag: "Идеи путешествий",
+            data: "17 января 2018",
+            title: "От Будапешта до Неаполя: маршрут романтического тура по Европе",
+            text: "Путешествие для двух влюбленных всегда становится каким-то новым особенным опытом, ведь так приятно..."
+        },
+        {
+            img: "assets/images/block_610.jpg",
+            cube: "background: #91a4ad",
+            tag: "Необычные места",
+            data: "25 сентября 2017",
+            title: "Барселона: 8 мест, которые знают только местные",
+            text: "Барселона — город, которым всегда вдохновлялись известные художники, скульпторы, композиторы, актеры и который..."
+        },
+        {
+            img: "assets/images/block_1529.jpg",
+            cube: "background: #f8e71c",
+            tag: "Личное впечатление",
+            data: "15 января 2018",
+            title: "12 дней в Новой Зеландии: как успеть посмотреть все самое интересное",
+            text: "Вулканы, ледники, горы, озера, водопады, термальные воды – кажется, во всем мире не найти другого места с настолько уникальной и красивой и природой."
+        },
+        {
+            img: "assets/images/block_1533.jpg",
+            cube: "background: #9b2fae",
+            tag: "Авиаперелеты",
+            data: "17 января 2018",
+            title: "В Париж на 8-е марта – всего за 152 евро!",
+            text: "Отличная цена от KLM! Разве можно представить себе более романтическое место для этого праздника?"
+        },
+        {
+            img: "assets/images/block_1528.jpg",
+            cube: "background: #23b0e0",
+            tag: "Подборки",
+            data: "15 января 2018",
+            title: "Уходим в отрыв: ТОП-10 фестивалей весны-лета 2018",
+            text: "Совсем скоро в Европе откроется сезон фестивалей и вечеринок — билеты на самые популярные из них уже в продаже и..."
+        },
+        {
+            img: "assets/images/block_908.jpg",
+            cube: "background: #ff9800",
+            tag: "Лайфхак",
+            data: "27 декабря 2017",
+            title: "Занзибар: что нужно знать про отдых на «африканских Мальдивах»",
+            text: "Занзибар для большинства путешественников все еще остается terra incognita, хотя за последние годы этот..."
+        }
+    ]
+
+section.ideas-for-traveling.landing-section
+    .ideas-for-traveling__container.container
+        article.ideas-for-traveling__block.grid
+            .ideas-for-traveling__title
+                .bold-title Идеи для путешествий
+            each card in cards_data
+                article.ideas-for-traveling__post-card
+                    a(href="#")
+                        .ideas-for-traveling__card-img
+                            img.ideas-for-traveling__img-size(src= card.img)
+                    .ideas-for-traveling__card-main
+                        .ideas-for-traveling__card-line.flex
+                            .ideas-for-traveling__card-cube(style= card.cube)
+                            .ideas-for-traveling__card-tag= card.tag
+                        .ideas-for-traveling__card-date= card.date
+                        .ideas-for-traveling__card-title= card.title
+                        .ideas-for-traveling__card-text
+                            p= card.text
+                        a.ideas-for-traveling__card-link(href="#") Читать далее
+            .ideas-for-traveling__btn
+                button.btn.btn-blue Читать больше статей в блоге

@@ -1,0 +1,43 @@
+@import "vars.styl"
+
+
+.popular-directions
+    background #F9F9F9
+    &__block
+        grid unquote('80px 40px repeat(2, 124px) 110px 120px 100px / repeat(5, 1fr)')
+        justify-items center
+        grid-gap 10px 
+     &__title
+        grid-column 1 / 6
+        align-self center
+    &__sub-title
+        grid-column 1 / 6
+        text-transform uppercase
+        &--under
+            align-self: end
+    &__list
+        background $dark 
+        position relative   
+    &__img
+        width 100%
+        height 100%
+        object-fit cover
+        opacity .8
+    &__text
+        position absolute
+        top 15px
+        left 15px
+        z-index 1             
+        color $light
+    &__city
+        font-size 18px
+    &__line
+        padding-bottom 5px    
+    &__link
+        font-size 15px
+        text-decoration underline
+        &:hover
+            color $cornflower
+    &__btn
+        grid-column 2 / 5
+        align-self end                  

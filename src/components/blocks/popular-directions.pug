@@ -1,0 +1,86 @@
+-
+    var items = [
+        ["Австралия", "Болгария", "Египет", "Доминикана", "Дания"],
+        ["Израиль", "Андорра", "ОАЭ", "Греция", "Бельгия"],
+        ["Иордания", "Италия", "Венгрия", "Индия", "Вьетнам"],
+        ["Индонезия", "Великобритания", "Германия", "Багамские острова", "Камбоджа"],
+        ["Австрия", "Грузия", "Испания", "Бразилия", "Барбадос"]
+    ]
+    var list_data = [
+        {
+            img: "assets/images/promo_300_1.jpg",
+            city: "Рим",
+            country: "Италия"
+        },
+        {
+            img: "assets/images/promo_300_7.jpg",
+            city: "Барселона",
+            country: "Испания"
+        },
+        {
+            img: "assets/images/promo_300_5.jpg",
+            city: "Прага",
+            country: "Чехия"
+        },
+        {
+            img: "assets/images/promo_300_2.jpg",
+            city: "Париж",
+            country: "Франция"
+        },
+        {
+            img: "assets/images/promo_300_10.jpg",
+            city: "Будапешт",
+            country: "Венгрия"
+        },
+        {
+            img: "assets/images/promo_300_8.jpg",
+            city: "Лондон",
+            country: "Великобритания"
+        },
+        {
+            img: "assets/images/promo_300_6.jpg",
+            city: "Тель-Авив",
+            country: "Израиль"
+        },
+        {
+            img: "assets/images/promo_300_4.jpg",
+            city: "Вильнюс",
+            country: "Литва"
+        },
+        {
+            img: "assets/images/promo_300_9.jpg",
+            city: "Нью-Йорк",
+            country: "США"
+        },
+        {
+            img: "assets/images/promo_300_3.jpg",
+            city: "Вена",
+            country: "Австрия"
+        }
+    ]
+
+
+section.popular-directions.landing-section
+    .popular-directions__container.container
+        article.popular-directions__block.grid
+            .popular-directions__title
+                .bold-title Популярные направления
+            .popular-directions__sub-title    
+                p.sub-title Города
+            each cities in list_data    
+                .popular-directions__list
+                    a(href="#")
+                        img.popular-directions__img(src= cities.img)
+                        .popular-directions__text
+                            .popular-directions__city= cities.city
+                            .popular-directions__country= cities.country
+            .popular-directions__sub-title.popular-directions__sub-title--under    
+                p.sub-title Страны
+            each item in items    
+                .popular-directions__items
+                    ul
+                        each i in item
+                            li.popular-directions__line
+                                a.popular-directions__link(href="#")= i
+            .popular-directions__btn
+                button.btn.btn-blue Все направления в нашем Путеводителе                    

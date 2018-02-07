@@ -1,0 +1,18 @@
+@import "vars.styl"
+
+
+.popular-flights
+    &__block
+        grid unquote('80px 140px / repeat(4, 1fr)')
+        justify-items center
+    &__title
+        grid-column 1 / 5
+        align-self center
+    &__list-routes
+        align-self end    
+    &__line
+        padding-bottom 6px 
+    &__link
+        font-size 15px
+        &:hover
+            color $cornflower           

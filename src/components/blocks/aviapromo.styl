@@ -1,21 +1,19 @@
 @import "vars.styl"
+@import "mixins.styl"
 
 
 .avia-promo
-  &__title
-    text-align center
   &__list
     grid-template-columns repeat(3, 1fr)
-    grid-column-gap $gutter
+    grid-column-gap 20px
   &__item-title
     font-size 18px
     font-weight 550
   &__img
+    bg-img()
     width 100%
     height 200px
     margin-top 10px
-    background-size cover
-    background-position center
     position relative
   &__side-label
     position absolute
@@ -24,7 +22,7 @@
     height 50px
     padding 10px 10px 0 10px
     color #fff
-    background $transport-orange
+    background #f6331e
     text-align center
     border-radius 0 3px 3px 0
     z-index 1
@@ -37,7 +35,7 @@
       height 0
       border-style solid
       border-width 0 8px 8px 0
-      border-color transparent $angle transparent transparent
+      border-color transparent #c60000 transparent transparent
 
   &__side-label-sale
     font-size 17px
@@ -61,7 +59,7 @@
     grid-template-columns 1fr 1fr
     margin-top 10px
     padding 5px 10px
-    background $smoke-white
+    background #f8f8f8
   &__cell
     flex-direction column
     align-items flex-end
@@ -71,34 +69,33 @@
   &__country
     font-size 13px
   &__price-old
-    color $old-price
+    color #c4c4c4
     font-size 13px
     &--change
-      color $dim-gray
+      color #6c6c6c
   &__price-sale
     display inline-block
     vertical-align middle
     margin-left 5px
     padding 0 5px
-    background-color $alizarin-red
+    background-color #e42c23
     color $light
     font-size 14px
     font-weight bold
     line-height 20px
     border-radius 3px
   &__price-actual
-    color: $red-orange-crayola
+    color: #ff4d44
     font-size 18px
     font-weight 700
     &--change
-      color $alizarin-red
+      color #e42c23
       font-size 18px
       font-weight 700
   &__price-date
     font-size 12px
     &--change
-      color $date
+      color #9b9b9b
       font-size: 12px;
   &__all-stock
     margin-top 30px
-    text-align center

@@ -1,12 +1,10 @@
 @import "vars.styl"
+@import "mixins.styl"
 
 
 .best
+  bg-img()
   color $light
-  text-align center
-  background-size cover
-  background-position center
-  background-repeat no-repeat
   &__block
     grid unquote('1fr 76px / 38% 25% 38%')
     grid-row-gap 45px

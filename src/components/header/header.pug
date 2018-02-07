@@ -1,51 +1,61 @@
 header.header
     .header__line
-    .header__top.container.grid
-        a.header__logo-indent(href="/")
-            img.header__logo(src="assets/images/logo.svg")
-        ul.header__menu.header__menu--indent-left.header__menu--hidden.flex
-            li.header__par
-                a.header__link(href="/")
-                    span.header__text Авиа
-            li.header__par
-                a.header__link(href="/")
-                    span.header__text Авиаскидки
-            li.header__par
-                a.header__link(href="/")
-                    span.header__text Отели
-            li.header__par
-                a.header__link(href="/")
-                    span.header__text--active Авиа+Отель
-                        sup (β)
-            li.header__par
-                a.header__link(href="/")
-                    span Ещё
-        .header__settings.flex
-            a.header__tools.flex(href="/")
-                svg.header__icon(viewbox='0 0 20 20', height='100%')
-                    path(d='M16 8h2.5A1.5 1.5 0 0 1 20 9.5v5.999a1.5 1.5 0 0 1-1.5 1.5h-1.012l.245 2.45a.5.5 0 0 1-.834.42l-3.157-2.87H10.5a1.5 1.5 0 0 1-1.5-1.5v-1.5h-.407l-4.257 3.87a.499.499 0 0 1-.833-.42L3.848 14H2a2 2 0 0 1-2-2V2A2 2 0 0 1 2 0h12a2 2 0 0 1 2 2v6zm-1 0V2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h2.4a.5.5 0 0 1 .498.55l-.27 2.704 3.436-3.124A.5.5 0 0 1 8.4 13H9V9.5A1.5 1.5 0 0 1 10.5 8H15zm-.729 8.13l2.337 2.124-.17-1.704a.5.5 0 0 1 .497-.55H18.5a.5.5 0 0 0 .5-.5v-6a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v6a.5.5 0 0 0 .5.5h3.435a.5.5 0 0 1 .336.13zM6 5.065a.5.5 0 1 1-1-.013c.008-.632.266-1.157.758-1.53C6.219 3.17 6.81 3 7.518 3c.729 0 1.323.17 1.77.523.472.375.712.907.712 1.552 0 .6-.303 1.16-.87 1.676-.062.056-.389.34-.48.424-.439.401-.645.71-.65.989V8.5a.5.5 0 0 1-1 0v-.344c.01-.642.35-1.146.974-1.719.104-.095.433-.38.483-.426.375-.342.543-.652.543-.936 0-.349-.109-.59-.334-.768C8.415 4.107 8.037 4 7.519 4c-.502 0-.883.11-1.156.317-.243.185-.359.42-.363.748zM7.5 11a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm5 0h4a.5.5 0 1 1 0 1h-4a.5.5 0 1 1 0-1zm0 2h2a.5.5 0 1 1 0 1h-2a.5.5 0 1 1 0-1z', fill-rule='evenodd')
-                span.header__text Помощь
-            a.header__tools.flex(href="/")
-                .header__flag(style="background-image: url('/assets/images/flag_ru.png')")
-                span.header__text Русский (UAH - грн)
-            a.header__tools.flex(href="/")
-                svg.header__icon(viewbox='0 0 20 20', height='100%')
-                    path(d='M10 19a9 9 0 1 0 0-18 9 9 0 0 0 0 18zm0 1C4.477 20 0 15.523 0 10S4.477 0 10 0s10 4.477 10 10-4.477 10-10 10zm0-9a9.991 9.991 0 0 1 8.353 4.5A9.991 9.991 0 0 1 10 20a9.991 9.991 0 0 1-8.353-4.5A9.991 9.991 0 0 1 10 11zm0 8a8.985 8.985 0 0 0 7.125-3.5A8.985 8.985 0 0 0 10 12a8.985 8.985 0 0 0-7.125 3.5A8.985 8.985 0 0 0 10 19zm0-7a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z', fill-rule='nonzero')
-                span.header__text Вход в аккаунт
+    .header__top
+        .header__container.container.grid
+            a.header__logo-indent(href="/")
+                img.header__logo(src="assets/images/logo.svg")
+            nav.header__nav.header__nav--hidden    
+                ul.header__menu.header__menu--indent-left.flex
+                    li.header__par
+                        a.header__link
+                            span.header__text Авиа
+                    li.header__par
+                        a.header__link
+                            span.header__text Авиаскидки
+                    li.header__par
+                        a.header__link
+                            span.header__text Отели
+                    li.header__par
+                        a.header__link.header__link
+                            span.header__text.header__text--active Авиа+Отель
+                                sup (β)
+                    li.header__par
+                        a.header__link.header__link--drop
+                            span Ещё
+                        .header__block-drop    
+                            ul.header__menu-drop
+                                li.header__par-drop.flex
+                                    a.header__link-drop(href="#") Экскурсии
+                                li.header__par-drop.flex
+                                    a.header__link-drop(href="#") Блог
+                                li.header__par-drop.flex 
+                                    a.header__link-drop(href="#") Гид
+            .header__settings.flex
+                a.header__tools.flex(href="/")
+                    svg.header__icon(viewbox='0 0 20 20', height='100%')
+                        path(d='M16 8h2.5A1.5 1.5 0 0 1 20 9.5v5.999a1.5 1.5 0 0 1-1.5 1.5h-1.012l.245 2.45a.5.5 0 0 1-.834.42l-3.157-2.87H10.5a1.5 1.5 0 0 1-1.5-1.5v-1.5h-.407l-4.257 3.87a.499.499 0 0 1-.833-.42L3.848 14H2a2 2 0 0 1-2-2V2A2 2 0 0 1 2 0h12a2 2 0 0 1 2 2v6zm-1 0V2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h2.4a.5.5 0 0 1 .498.55l-.27 2.704 3.436-3.124A.5.5 0 0 1 8.4 13H9V9.5A1.5 1.5 0 0 1 10.5 8H15zm-.729 8.13l2.337 2.124-.17-1.704a.5.5 0 0 1 .497-.55H18.5a.5.5 0 0 0 .5-.5v-6a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v6a.5.5 0 0 0 .5.5h3.435a.5.5 0 0 1 .336.13zM6 5.065a.5.5 0 1 1-1-.013c.008-.632.266-1.157.758-1.53C6.219 3.17 6.81 3 7.518 3c.729 0 1.323.17 1.77.523.472.375.712.907.712 1.552 0 .6-.303 1.16-.87 1.676-.062.056-.389.34-.48.424-.439.401-.645.71-.65.989V8.5a.5.5 0 0 1-1 0v-.344c.01-.642.35-1.146.974-1.719.104-.095.433-.38.483-.426.375-.342.543-.652.543-.936 0-.349-.109-.59-.334-.768C8.415 4.107 8.037 4 7.519 4c-.502 0-.883.11-1.156.317-.243.185-.359.42-.363.748zM7.5 11a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm5 0h4a.5.5 0 1 1 0 1h-4a.5.5 0 1 1 0-1zm0 2h2a.5.5 0 1 1 0 1h-2a.5.5 0 1 1 0-1z', fill-rule='evenodd')
+                    span.header__text.header__text-help Помощь
+                a.header__tools.flex(href="/")
+                    .header__flag(style="background-image: url('/assets/images/flag_ru.png')")
+                    span.header__text.header__text-lang Русский (UAH - грн)
+                a.header__tools.flex(href="/")
+                    svg.header__icon(viewbox='0 0 20 20', height='100%')
+                        path(d='M10 19a9 9 0 1 0 0-18 9 9 0 0 0 0 18zm0 1C4.477 20 0 15.523 0 10S4.477 0 10 0s10 4.477 10 10-4.477 10-10 10zm0-9a9.991 9.991 0 0 1 8.353 4.5A9.991 9.991 0 0 1 10 20a9.991 9.991 0 0 1-8.353-4.5A9.991 9.991 0 0 1 10 11zm0 8a8.985 8.985 0 0 0 7.125-3.5A8.985 8.985 0 0 0 10 12a8.985 8.985 0 0 0-7.125 3.5A8.985 8.985 0 0 0 10 19zm0-7a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z', fill-rule='nonzero')
+                    span.header__text Вход в аккаунт
     nav.header__lower.container.grid
                     .header__menu.header__menu--responsive.flex
-                        a.header__link.header__link--delete-indent-left(href="/")
+                        a.header__link.header__link--delete-indent-left
                             span.header__text Авиа
-                        a.header__link(href="/")
+                        a.header__link
                             span.header__text Авиаскидки
-                        a.header__link(href="/")
+                        a.header__link
                             span.header__text Отели
-                        a.header__link.header__link--indent(href="/")
-                            span.header__text--active Авиа+Отель
+                        a.header__link.header__link--indent.header__link
+                            span.header__text.header__text--active Авиа+Отель
                                 sup (β)
-                        a.header__link(href="/")
+                        a.header__link
                             span.header__text Экскурсии
-                        a.header__link(href="/")
+                        a.header__link
                             span.header__text Блог
-                        a.header__link.header__link--delete-indent-right(href="/")
+                        a.header__link.header__link--delete-indent-right
                             span.header__text Гид

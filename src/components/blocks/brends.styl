@@ -1,0 +1,22 @@
+@import "vars.styl"
+
+
+.brends
+    background #F9F9F9
+    &__block
+        grid unquote('80px repeat(3, 150px) / repeat(4, 25%)')
+        justify-items center
+        align-items center
+    &__title
+        grid-column: 1 / 5
+    &__press
+        width 100%
+        height 100%
+        justify-content center
+        align-items center
+        opacity 0.5
+        filter grayscale(100%)
+        transition filter 200ms, opacity 200ms, filter 200ms, opacity 200ms
+        &:hover
+            opacity 1
+            filter none

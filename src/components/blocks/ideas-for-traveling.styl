@@ -1,0 +1,54 @@
+@import "vars.styl"
+
+
+.ideas-for-traveling
+    background #edeff1
+    &__block
+        grid unquote('80px repeat(2, 451px) 80px / repeat(3, 1fr)')
+        justify-items center
+        grid-gap 20px
+    &__title
+        grid-column 1 / 4
+    &__post-card
+        background $light
+    &__card-img
+        height 200px
+    &__img-size
+        width 100%
+        height 100%
+        object-fit cover
+    &__card-main
+        padding 15px 20px 22px
+    &__card-line
+        align-items baseline    
+    &__card-cube
+        width 11px
+        height 11px
+        margin-right 5px  
+    &__card-tag
+        margin-bottom 7px
+        font-size 15px
+        font-weight bold
+        text-transform uppercase
+    &__card-date
+        margin-bottom 3px
+    &__card-title
+        margin-bottom 10px
+        font-weight 550
+        font-size 15px
+        line-height 1.4
+    &__card-text
+        margin-bottom 15px
+        font-size 15px
+        font-weight 300
+        line-height 1.4     
+    &__card-link
+        display inline-block
+        color #4a4a4a
+        font-size 13px
+        font-weight 500                      
+        line-height 1
+        border-bottom 1px solid
+    &__btn
+        grid-column 2 / 3 
+        align-self end   

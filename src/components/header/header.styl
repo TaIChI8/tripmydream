@@ -3,45 +3,88 @@
 
 .header
   width 100%
-  display block
   background $light
+  padding-top 50px
   &__line
+    position fixed
+    top 50px
+    left 0
+    right 0
     border-bottom 1px solid #EDEDED
-    position: absolute;
-    top: 50px;
-    left: 0;
-    right: 0;
   &__top
     width 100%
+    position fixed
+    top 0
+    z-index 10 
+    background $light   
+  &__container
     grid-template 50px / 172px 4fr 3fr
+    width 100%
+    &--grid-scroll
+      grid-template 50px / 172px 4fr 25%
   &__logo
     width 172px
     height 18px
     &-indent
       margin-top 18px
-  &__menu
-    display inline-block
-    align-items center
-    transition visibility .15s .0s, opacity .15s .0s
+  &__nav
+    align-self center
+    transition visibility .15s .0s, opacity .15s .0s    
     &--hidden
       visibility hidden
+    &--visible
+      visibility visible  
+  &__menu
+    align-items center
+    padding-bottom 2px
     &--indent-left
-      margin-left $gutter
+      margin-left 20px
     &--responsive
       justify-content space-between
-  &__par
-    display table-cell
+  &__block-drop
+    display none
+    width 130px
+    height 141px
+    background $light
+    border-radius 3px
+    border-top 1px solid #ededed
+    box-shadow 0 14px 40px 0 rgba(0, 0, 0, 0.35)
+    margin-left -5px
+    position absolute
+    top 50px 
+    &:hover
+      display block  
+  &__menu-drop
+    padding 10px 0
+  &__par-drop
+    width 130px
+    height 40px
+    &:hover
+      cursor pointer
+      background #F5F5F5
+  &__link-drop
+    align-self center
+    padding 0 20px
+    font-weight 600        
   &__link
-    padding 15px 10px 15px
     color $dark
     font-weight 600
-    line-height 5px
+    line-height 1px
+    padding 15px 10px 15px
+    position relative
+    z-index 1
+    &:hover
+      cursor pointer  
     &--indent
       margin-bottom: 5px
     &--delete-indent-left
       padding-left 0
     &--delete-indent-right
-      padding-right 0
+      padding-right 0  
+    &--drop
+      padding 20px 30px 20px 10px
+      &:hover ~ .header__block-drop
+        display block
   &__settings
     align-items center
     justify-content space-between
@@ -50,7 +93,6 @@
   &__icon
     margin-right 10px
   &__flag
-    display inline-block
     width 22px
     height 20px
     margin-right 5px
@@ -58,10 +100,13 @@
   &__text
     color $dark
     font-weight 600
+    position relative
+    z-index -2
     &--active
-      padding-bottom 13px
       color $dark
       font-weight 600
-      border-bottom 5px solid $border-bt
+      padding-bottom 13px
+      border-bottom 5px solid #f37d20
   &__lower
     grid-template 50px / 600px 1fr
+    position relative

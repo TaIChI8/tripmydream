@@ -1,2 +1,73 @@
+@import "vars.styl"
+
+
 .footer
-  color red
+  background #303437
+  &__block
+    grid unquote('80px repeat(2, 1fr) / repeat(7, 1fr) 220px')
+    color #7a7a7a
+    font-size 13px
+  &__copyright
+    grid-column 1 / 7
+    flex-wrap wrap  
+  &__icon-size
+    width 116px
+    height 15px
+    fill $light
+  &__copyright-year
+    margin 1px 0 0 5px
+  &__reservation
+    grid-column 8 / 9  
+  &__btn
+    align-items center
+    background #16bcff
+    color $light
+    text-align left
+    border none
+    border-radius 3px
+    font-weight 550
+    font-size 12px
+    text-transform uppercase
+    &:hover
+      background $dark-amber
+      cursor pointer
+    &--dark
+      background #0044A4
+  &__cell
+    justify-content center
+    align-items center
+    width 60px
+    height 54px  
+  &__icon-btn
+    width 1em
+    height 1em
+    fill $light
+    font-size 22px
+  &__social
+    align-items center  
+  &__link-social
+    margin-right 10px  
+  &__icon-social
+    width 1em
+    height 1em
+    font-size 30px
+    &:hover
+      fill $dark-amber
+    &--fb
+      fill #3A5BA0
+    &--tw
+      fill #2ca7e0
+    &--goo
+      fill #E13719
+    &--inst
+      fill #527FA3
+  &__nav
+    grid-column 1 / 9
+    align-self end     
+  &__link-nav
+    margin-right 20px
+    text-decoration underline
+    font-weight 700        
+    color: $light
+    &:hover
+      color $cornflower

@@ -1,0 +1,23 @@
+-
+    var routes = [
+        ["Тель-Авив", "Стамбул", "Тбилиси", "Барселона", "Варшава"],
+        ["Вильнюс", "Прага", "Венеция", "Будапешт", "Мадрид"],
+        ["Амстердам", "Дубай", "Москва", "Санкт-Петербург", "Германия"],
+        ["Грузия", "Израиль", "Россия", "США", "Бангкок"]
+    ]
+
+section.popular-flights.landing-section
+    .popular-flights__container.container
+        .popular-flights__block.grid
+            .popular-flights__title
+                .bold-title Популярные рейсы
+            each route in routes    
+                .popular-flights__list-routes
+                    ul
+                        each i in route
+                            li.popular-flights__line
+                                a.popular-flights__link(href="#") Киев
+                                    = ' '
+                                    span →
+                                    = ' '
+                                    span= i  

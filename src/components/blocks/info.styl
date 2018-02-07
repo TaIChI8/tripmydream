@@ -1,0 +1,31 @@
+@import "vars.styl"
+
+
+.info
+    &__block
+        grid unquote('90px 125px 45px / 70%')
+        justify-content center
+        position relative
+    &__img
+        width 300px
+        height auto    
+        margin-bottom 15px
+    &__desc
+        font-size 15px
+        overflow hidden
+    &__more
+        justify-self center
+        align-self end
+        &:before
+            content ''
+            position absolute
+            bottom 100%
+            top 185px
+            left 0
+            right 0
+            height 30px
+            background linear-gradient(rgba(255, 255, 255, 0), white) 
+    &__link
+        color $cornflower
+        font-size 18px
+        border-bottom 1px solid $cornflower            

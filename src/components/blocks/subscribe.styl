@@ -1,0 +1,25 @@
+@import "vars.styl"
+@import "mixins.styl"
+
+
+.subscribe
+    bg-img()
+    &__block
+        grid unquote('1fr 58px / 60% 25%')
+        justify-content center
+        grid-column-gap 28px
+        color $light
+    &__title
+        grid-column 1 / 3
+    &__field
+        width 87% 
+        justify-self end   
+    &__input
+        width: 100%
+        height 58px
+        padding 0 20px
+        border none
+        border-radius 3px
+        font-size 18px
+    &__send
+        justify-self start
