@@ -61,7 +61,7 @@
 
 
 section.popular-directions.landing-section
-    .popular-directions__container.container
+    .container
         article.popular-directions__block.grid
             .popular-directions__title
                 .bold-title Популярные направления
@@ -77,7 +77,7 @@ section.popular-directions.landing-section
             .popular-directions__sub-title.popular-directions__sub-title--under    
                 p.sub-title Страны
             each item in items    
-                .popular-directions__items
+                div
                     ul
                         each i in item
                             li.popular-directions__line

@@ -2,8 +2,6 @@
 
 
 .header
-  width 100%
-  background $light
   padding-top 50px
   &__line
     position fixed
@@ -13,20 +11,16 @@
     border-bottom 1px solid #EDEDED
   &__top
     width 100%
+    background $light   
     position fixed
     top 0
     z-index 10 
-    background $light   
   &__container
     grid-template 50px / 172px 4fr 3fr
-    width 100%
     &--grid-scroll
       grid-template 50px / 172px 4fr 25%
   &__logo
-    width 172px
-    height 18px
-    &-indent
-      margin-top 18px
+    align-self center
   &__nav
     align-self center
     transition visibility .15s .0s, opacity .15s .0s    
@@ -37,14 +31,14 @@
   &__menu
     align-items center
     padding-bottom 2px
-    &--indent-left
-      margin-left 20px
     &--responsive
       justify-content space-between
+    &--indent-left
+      margin-left 20px
   &__block-drop
     display none
     width 130px
-    height 141px
+    height 140px
     background $light
     border-radius 3px
     border-top 1px solid #ededed
@@ -57,7 +51,6 @@
   &__menu-drop
     padding 10px 0
   &__par-drop
-    width 130px
     height 40px
     &:hover
       cursor pointer
@@ -67,7 +60,6 @@
     padding 0 20px
     font-weight 600        
   &__link
-    color $dark
     font-weight 600
     line-height 1px
     padding 15px 10px 15px
@@ -75,7 +67,7 @@
     z-index 1
     &:hover
       cursor pointer  
-    &--indent
+    &--indent-bt
       margin-bottom: 5px
     &--delete-indent-left
       padding-left 0
@@ -98,15 +90,11 @@
     margin-right 5px
     background-size cover
   &__text
-    color $dark
     font-weight 600
     position relative
-    z-index -2
+    z-index -1
     &--active
-      color $dark
-      font-weight 600
       padding-bottom 13px
       border-bottom 5px solid #f37d20
   &__lower
     grid-template 50px / 600px 1fr
-    position relative

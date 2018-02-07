@@ -130,15 +130,15 @@
     ]
 
 section.avia-promo.landing-section
-    article.avia-promo__container.container
-        .avia-promo__title.text-center
+    article.container
+        .text-center
             .bold-title Найти дешевый перелет стало еще проще!
             .sub-title Популярные бюджетные предложения на перелеты по всему миру
         .avia-promo__list.grid
             each data in categories_data
-                article.avia-promo__item
+                article
                     .avia-promo__item-title= data.title
-                    a.avia-promo__link( href="#")
+                    a( href="#")
                         .avia-promo__img(style= data.img)
                             .avia-promo__side-label
                                 span.avia-promo__side-label-sale= data.sale
@@ -152,7 +152,7 @@ section.avia-promo.landing-section
                                         .avia-promo__price-old.obsolete= data.priceOld
                                         .avia-promo__price-actual= data.priceActual
                                         .avia-promo__price-date= data.priceDate
-                    .avia-promo__table
+                    article
                         each table in data.table
                             a.avia-promo__tab-link.grid( href="#")
                                 .avia-promo__cell
@@ -164,4 +164,4 @@ section.avia-promo.landing-section
                                     .avia-promo__price-actual--change= table.priceActual
                                     .avia-promo__price-date--change= table.priceDate
         .avia-promo__all-stock.text-center
-            button.avia-promo__btn.btn.btn-size Смотреть все акции и скидки на авиабилеты
+            button.btn.btn-size Смотреть все акции и скидки на авиабилеты

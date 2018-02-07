@@ -1,6 +1,4 @@
 .header {
-  width: 100%;
-  background: #fff;
   padding-top: 50px;
 }
 .header__line {
@@ -12,24 +10,21 @@
 }
 .header__top {
   width: 100%;
+  background: #fff;
   position: fixed;
   top: 0;
   z-index: 10;
-  background: #fff;
 }
 .header__container {
   grid-template: 50px/172px 4fr 3fr;
-  width: 100%;
 }
 .header__container--grid-scroll {
   grid-template: 50px/172px 4fr 25%;
 }
 .header__logo {
-  width: 172px;
-  height: 18px;
-}
-.header__logo-indent {
-  margin-top: 18px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 .header__nav {
   -webkit-align-self: center;
@@ -51,19 +46,19 @@
   align-items: center;
   padding-bottom: 2px;
 }
-.header__menu--indent-left {
-  margin-left: 20px;
-}
 .header__menu--responsive {
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
+.header__menu--indent-left {
+  margin-left: 20px;
+}
 .header__block-drop {
   display: none;
   width: 130px;
-  height: 141px;
+  height: 140px;
   background: #fff;
   border-radius: 3px;
   border-top: 1px solid #ededed;
@@ -80,7 +75,6 @@
   padding: 10px 0;
 }
 .header__par-drop {
-  width: 130px;
   height: 40px;
 }
 .header__par-drop:hover {
@@ -95,7 +89,6 @@
   font-weight: 600;
 }
 .header__link {
-  color: #000;
   font-weight: 600;
   line-height: 1px;
   padding: 15px 10px 15px;
@@ -105,7 +98,7 @@
 .header__link:hover {
   cursor: pointer;
 }
-.header__link--indent {
+.header__link--indent-bt {
   margin-bottom: 5px;
 }
 .header__link--delete-indent-left {
@@ -143,20 +136,16 @@
   background-size: cover;
 }
 .header__text {
-  color: #000;
   font-weight: 600;
   position: relative;
-  z-index: -2;
+  z-index: -1;
 }
 .header__text--active {
-  color: #000;
-  font-weight: 600;
   padding-bottom: 13px;
   border-bottom: 5px solid #f37d20;
 }
 .header__lower {
   grid-template: 50px/600px 1fr;
-  position: relative;
 }
 .search-travels {
   background-size: cover;
@@ -179,7 +168,6 @@
   position: relative;
 }
 .search-travels__title {
-  grid-template: 50px 50px/1fr;
   color: #fff;
 }
 .search-travels__item {
@@ -237,33 +225,28 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 100%;
   height: 200px;
   margin-top: 10px;
   position: relative;
 }
 .avia-promo__side-label {
+  height: 50px;
+  color: #fff;
+  background: #f6331e;
+  padding: 10px 10px 0 10px;
+  border-radius: 0 3px 3px 0;
   position: absolute;
   top: 25px;
   left: -8px;
-  height: 50px;
-  padding: 10px 10px 0 10px;
-  color: #fff;
-  background: #f6331e;
-  text-align: center;
-  border-radius: 0 3px 3px 0;
-  z-index: 1;
 }
 .avia-promo__side-label::before {
   content: '';
-  position: absolute;
-  left: 0;
-  bottom: -8px;
-  width: 0;
-  height: 0;
   border-style: solid;
   border-width: 0 8px 8px 0;
   border-color: transparent #c60000 transparent transparent;
+  position: absolute;
+  bottom: -8px;
+  left: 0;
 }
 .avia-promo__side-label-sale {
   font-size: 17px;
@@ -273,7 +256,6 @@
 .avia-promo__side-label-title {
   display: block;
   font-size: 10px;
-  font-weight: 400;
 }
 .avia-promo__note {
   position: absolute;
@@ -364,9 +346,8 @@
 .calendar__block {
   max-width: 780px;
   grid: 1fr 2fr 83px / repeat(3, 1fr);
-  padding: 30px 20px;
-  color: #353535;
   background-color: rgba(255,255,255,0.8);
+  padding: 30px 20px;
 }
 .calendar__title {
   grid-column: 1/4;
@@ -449,7 +430,6 @@
 }
 .advantage__about-us-text {
   font-size: 15px;
-  font-weight: 300;
 }
 .advantage__underline {
   grid-column: 1/4;
@@ -473,7 +453,6 @@
 }
 .advantage__counter-num {
   width: 50px;
-  height: 70px;
   display: inline-block;
   margin-right: 3px;
   line-height: 70px;
@@ -482,7 +461,6 @@
   background: #f8f8f8;
 }
 .advantage__text {
-  margin-top: 20px;
   font-size: 18px;
 }
 .advantage__img {
@@ -647,7 +625,6 @@
 }
 .info__img {
   width: 300px;
-  height: auto;
   margin-bottom: 15px;
 }
 .info__desc {
@@ -724,22 +701,18 @@
   margin-bottom: 3px;
 }
 .ideas-for-traveling__card-title {
-  margin-bottom: 10px;
   font-weight: 550;
   font-size: 15px;
   line-height: 1.4;
 }
 .ideas-for-traveling__card-text {
-  margin-bottom: 15px;
   font-size: 15px;
-  font-weight: 300;
   line-height: 1.4;
 }
 .ideas-for-traveling__card-link {
   display: inline-block;
   color: #4a4a4a;
   font-size: 13px;
-  font-weight: 500;
   line-height: 1;
   border-bottom: 1px solid;
 }
@@ -784,11 +757,10 @@
   opacity: 0.8;
 }
 .popular-directions__text {
+  color: #fff;
   position: absolute;
   top: 15px;
   left: 15px;
-  z-index: 1;
-  color: #fff;
 }
 .popular-directions__city {
   font-size: 18px;
@@ -852,7 +824,6 @@
 .footer__block {
   grid: 80px repeat(2, 1fr) / repeat(7, 1fr) 220px;
   color: #7a7a7a;
-  font-size: 13px;
 }
 .footer__copyright {
   grid-column: 1/7;

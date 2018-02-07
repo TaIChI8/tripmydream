@@ -14,7 +14,7 @@ document.querySelector("body").onscroll = function () {
             nav.classList.remove("header__nav--visible");
             nav.classList.add("header__nav--hidden");
         }
-        if (container.classList.contains("header__container--grid-scroll") !== -1) container.classList.remove("header__container--grid-scroll");
+        if (container.classList.contains("header__container--grid-scroll")) container.classList.remove("header__container--grid-scroll");
         return;
     }
     if (!nav.classList.contains("header__nav--visible")) {
